@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Sometimes I tell myself <code> "Isn't circumcision just a dick tailor?"</code> and then tell myself to go to bed.
         </p>
         <a
           className="App-link"
