@@ -6,10 +6,11 @@ import axios from 'axios';
 function MyApp() {
   const [characters, setCharacters] = useState([]);  
 
-function removeOneCharacter (index) {
+function removeOneCharacter (index, id) {
   const updated = characters.filter((character, i) => {
       return i !== index
     });
+    axios.delete('http://localhost:5000/users/' + String(id));
     setCharacters(updated);
 }
 
@@ -43,7 +44,7 @@ async function makePostCall(person){
 function updateList(person) { 
   makePostCall(person).then( result => {
   if (result)
-     setCharacters([...characters, person] );
+    setCharacters([...characters, person] );
   });
 }
 
